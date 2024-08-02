@@ -3,7 +3,7 @@ module.exports = [
   {
     id: 1,
     location_code: "L1",
-    description: "תינוק ננעל ברכב",
+    description: " תינוק ננעל ברכב",
     contact_phone: "050-1234567",
     status: "ממתין",
     people_trapped: 2,
@@ -23,7 +23,7 @@ module.exports = [
   {
     id: 3,
     location_code: "L3",
-    description: "תאונת פגע וברח",
+    description: " תאונת פגע וברח",
     contact_phone: "058-4738695",
     status: "הסתיים",
     people_trapped: 1,
@@ -43,7 +43,7 @@ module.exports = [
   {
     id: 5,
     location_code: "L3",
-    description: "רכב תקוע באמצע הדרך",
+    description: " רכב תקוע באמצע הדרך",
     contact_phone: "052-8884389",
     status: "בטיפול",
     people_trapped: 4,
@@ -53,7 +53,7 @@ module.exports = [
   {
     id: 6,
     location_code: "L1",
-    description: "פיגוע",
+    description: "פיגוע בשכונת מגורים , פצועים במצב קשה",
     contact_phone: "055-3333245",
     status: "ממתין",
     people_trapped: 7,

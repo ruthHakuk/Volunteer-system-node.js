@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "861e3f24-f6af-41ea-b739-b8310f7b76b4",
+		"name": "project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32121011"
+	},
+	"item": [
+		{
+			"name": "HelpRequests",
+			"item": [
+				{
+					"name": "get all helpRequests",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests?status=ממתין",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ממתין"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by priority",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests?priority=גבוהה",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests"
+							],
+							"query": [
+								{
+									"key": "priority",
+									"value": "גבוהה"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests?location=כביש6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "כביש6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by all params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests?status=בטיפול&priority=נמוכה&location=ירושלים",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "בטיפול"
+								},
+								{
+									"key": "priority",
+									"value": "נמוכה"
+								},
+								{
+									"key": "location",
+									"value": "ירושלים"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update volunteer status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n   \"location_code\" : \"LOC123\",\r\n    \"description\": \"תיאור הבעיה כאן...\",\r\n    \"contact_phone\": \"050-1234567\",\r\n    \"status\": \"בטיפול\",\r\n    \"people_trapped\": 2,\r\n    \"priority_code\": \"HIGH\",\r\n    \"volunteer_code\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Failes update request , id not exist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 6,\r\n        \"location_code\": \"L1\",\r\n        \"description\": \"פיגוע דקירה\",\r\n        \"contact_phone\": \"050-1234567\",\r\n        \"status\": \"ממתין\",\r\n        \"people_trapped\": 2,\r\n        \"priority_code\": \"HIGH\",\r\n        \"volunteer_code\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/HelpRequests/3245999900",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"HelpRequests",
+								"3245999900"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Volunteers",
+			"item": [
+				{
+					"name": "Get all volunteers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add new volunteer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\":3,\r\n      \"first_name\": \"חנה\",\r\n      \"last_name\": \"חיים\",\r\n      \"phone\": \"054-9999990\",\r\n      \"specializations\": [ \"יעוץ מס\"]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/Volunteers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Volunteers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
